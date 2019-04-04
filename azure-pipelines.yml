@@ -7,11 +7,12 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-18.04'
+  vmImage: 'Ubuntu-16.04'
 
 variables:
   buildConfiguration: 'Release'
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet-install.sh
   displayName: 'dotnet build $(buildConfiguration)'
