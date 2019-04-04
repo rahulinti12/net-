@@ -14,5 +14,5 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
-- script: dotnet-install.sh
+- script: ./dotnet-install.sh --channel LTS
   displayName: 'dotnet build $(buildConfiguration)'
